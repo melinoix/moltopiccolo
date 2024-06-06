@@ -10,14 +10,21 @@
       crossorigin="anonymous"
     />
     <title>Loser</title>
+    <style>
+        body {
+            font-family: 'Inconsolata', monospace;
+            font-weight: 700;
+            font-size: 20px;
+    }
+    </style>
 </head>
 <body>
     <div class="container justify-content-center mt-5" style="width: fit-content ">
-        <h3>Loser {{username}} !</h4>
-        <h4>Your score is {{score}}</h4>
+        <h1>Tu non sei niente!</h4>
+        <h4>Your final score is {{score}}</h4>
         <form action="{%url 'login' %}" method="get">
         {% csrf_token %}
-        <button type="submit" class="btn btn-primary">Go back to home</button>
+        <button type="submit" class="btn btn-outline-success">Go back to home</button>
         </form>
         
     </div>

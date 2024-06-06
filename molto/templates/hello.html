@@ -10,11 +10,24 @@
       crossorigin="anonymous"
     />
     <style>
-        html {
+        body {
             font-family: 'Inconsolata', monospace;
             font-weight: 700;
             font-size: 20px;
     }
+        a {
+        box-shadow: inset 0 0 0 0 #85dd6a;
+        color: #609350;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        }
+        a:hover {
+        box-shadow: inset 100px 0 0 0 #4a8244;
+        color: white;
+        }
+
+
     </style>
     <title>Hello</title>
 </head>
@@ -22,20 +35,22 @@
     
     <div class="container justify-content-center mt-5" style="width: fit-content ">
         {% if username %}
-        <h3>Ciao {{username}} !</h4>
-        <h4>Your best score is {{best_score}}</h4>
+        <h1>Ciao {{username}} !</h4>
+        <h3>Your best score is {{best_score}}</h4>
         
         <a href="{% url 'logout' %}">logout</a>
         <hr class="dashed">
         <form action="{%url 'quiz' %}" method="post">
             {% csrf_token %}
-            <button type="submit" class="btn btn-primary">Start</button>
+            <button type="submit" class="btn btn-outline-success btn-lg">Start</button>
         </form>
         {% else %}
         <h1>Ciao stranger! Welcome in moltopiccolo</h1>
-        <h4>Please login with a username to begin your training. </h4>
+        <h4>Please login with a username to begin your italian training. </h4>
         
         <a href="{% url 'login' %}"> login </a>
+
+        <img src="https://static.vecteezy.com/system/resources/previews/021/311/734/original/pizza-transparent-background-png.png" alt="Italian Flag Brush" width="100" height="100">
 
         
         {% endif %}
