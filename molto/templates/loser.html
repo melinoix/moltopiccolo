@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Loser</title>
+</head>
+<body>
+    <div class="container justify-content-center mt-5" style="width: fit-content ">
+        <h3>Loser {{username}} !</h4>
+        <h4>Your score is {{score}}</h4>
+        <form action="{%url 'login' %}" method="get">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Go back to home</button>
+        </form>
+        
+    </div>
+</body>
+</html>
