@@ -6,3 +6,6 @@ The aim of this game is to learn italian vocabulary.
 
 Project made in Django and manage data by cookies.
 
+# Execute the project
+
+ Run this command : ``` python3 manage.py runserver```
